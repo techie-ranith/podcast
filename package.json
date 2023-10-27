@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "yarn husky install",
+    "postinstall": "yarn husky install && npm install -g @commitlint/cli @commitlint/config-conventional",
     "commitlint": "commitlint --edit"
   },
   "dependencies": {
