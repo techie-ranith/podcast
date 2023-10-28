@@ -29,7 +29,9 @@ jobs:
 
         if [ $valid_commit -eq 1 ]; then
           echo "Commit message includes a valid prefix. Build passed."
+          echo $commit_message
         else
           echo "Commit message does not include a valid prefix. Build failed."
+          echo $commit_message
           exit 1
         fi
