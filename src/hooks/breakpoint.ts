@@ -14,7 +14,7 @@ const calculateBreakpoints = () => {
 
   const screens: Screens = tailwindConfig.theme.screens;
 
-  const initialBreakpoints = Object.keys(screens).reduce((acc:any, key) => {
+  const initialBreakpoints = Object.keys(screens).reduce((acc: any, key) => {
     acc[key] = window.matchMedia(`(min-width: ${screens[key]})`).matches;
     return acc;
   }, {});
