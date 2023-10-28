@@ -1,9 +1,6 @@
 name: Commit Message Prefix Check
 
-on:
-  pull_request:
-    types:
-      - opened
+on: [push]
 
 jobs:
   check:
