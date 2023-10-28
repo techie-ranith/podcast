@@ -6,11 +6,15 @@ on:
       - opened
       - synchronize
       - reopened
+
 jobs:
   commit-message-check:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Check Out Code
+      uses: actions/checkout@v2  # This step checks out your Git repository
+
     - name: Check Commit Message
       id: check-commit-message
       run: |
