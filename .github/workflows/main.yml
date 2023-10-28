@@ -13,9 +13,9 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Check Commit Message Prefix
+    - name: Get Commit Message
       run: |
-        commit_message=$(git log --format=%B -n 1)
+        commit_message=$(git log --format=%B -n 1 ${{ github.event.before }})
         valid_prefixes=("feat!" "feat" "fix" "patch" "chore" "build" "debug" "refactor" "revert" "ci" "perf" "style" "test" "docs" "wip")
 
         valid_commit=0
