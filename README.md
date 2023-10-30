@@ -15,7 +15,7 @@ Once you have the necessary tools, follow these steps to get the project running
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/Project-Name.git
+   git clone https://github.com/fossnsbm/dialectic-web.git
    ```
 
 2. Change to the project directory:
