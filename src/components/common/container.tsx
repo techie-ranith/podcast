@@ -13,6 +13,7 @@ const Container: React.FC<ContainerProps> = ({ children }) => {
             md:px-10
             sm:px-10
             px-6
+            h-screen
         `}
     >
       {children}

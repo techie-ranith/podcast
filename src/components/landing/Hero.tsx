@@ -10,6 +10,11 @@ import apple_podcast from "/public/images/Apple_podcasts.svg";
 import overcast from "/public/images/Overcast.svg";
 import rss from "/public/images/RSS.svg";
 import listners from "/public/images/listners.svg";
+// hero image
+import tl from "/public/images/tl.png";
+import tr from "/public/images/tr.png";
+import bl from "/public/images/bl.png";
+import br from "/public/images/br.png";
 
 import { url } from "inspector";
 import { SaveAll } from "lucide-react";
@@ -18,8 +23,8 @@ import { URL } from "next/dist/compiled/@edge-runtime/primitives/url";
 const hero = () => {
   return (
     <Container>
-      <div className="flex items-center justify-center mt-4 mb-4 h-screen">
-        <div className="w-[60%] flex flex-col justify-evenly items-start m-4 h-full">
+      <div className="flex lg:flex-row xs:flex-col gap-4 items-center justify-center mt-4 mb-4 xs:h-screen text-gray-900 text-lg font-medium h-screen">
+        <div className="w-[60%] flex flex-col justify-evenly items-start h-full">
           <div className="flex items-center justify-center gap-6 bg-gray-200 rounded-full pr-4">
             <div>
               <Button variant={"blue"} size={"rounded"}>
@@ -28,7 +33,7 @@ const hero = () => {
             </div>
             <div>Lorem ipsum dolor sit amet.</div>
           </div>
-          <div className="text-5xl w-[80%] whitespace-pre-line">
+          <div className="text-5xl w-[80%] whitespace-pre-line font-inter font-medium">
             Exploring Tomorrow's{"\n"}
             Tech Innovations, {"\n"}
             One Byte at a Time.{"\n"}
@@ -61,15 +66,22 @@ const hero = () => {
             </div>
           </div>
         </div>
-        <div className="w-[40%] flex items-center flex-col justify-center h-full">
-          <div className="w-full h-[95%] image p-8">
-            <Image src={Hero_img} alt="hero image"></Image>
+        <div className="w-[40%] flex items-center flex-col justify-center gap-10">
+          <div className="flex items-center justify-center">
+            <div className=" w-full bg-center bg-cover relative grid grid-cols-2 grid-rows-2 gap-4">
+              <div className="rounded-full bg-blue-800 h-24 w-24  absolute flex items-center justify-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white-0 text-center z-2 whitespace-pre-line ">
+                20+ {"\n"} Podcasts
+              </div>
+              <Image src={tl} alt="" className="col-1 row-1 p-0 m-0"></Image>
+              <Image src={tr} alt="" className="col-2 row-1 p-0 m-0"></Image>
+              <Image src={bl} alt="" className="col-1 row-2 p-0 m-0"></Image>
+              <Image src={br} alt="" className="col-2 row-2 p-0 m-0"></Image>
+            </div>
           </div>
-          <div className="h-[5%] w-full flex text-sm items-center justify-center ">
-            <div className="flex-1 h-full relative justify-end">
+          <div className="` w-full flex text-sm items-center justify-center gap-6">
+            <div className=" flex flex-1 h-full relative items-center justify-end">
               <Image
                 src={listners}
-                layout="fill"
                 objectFit="contain"
                 objectPosition="center"
                 alt="icon"
@@ -82,5 +94,15 @@ const hero = () => {
     </Container>
   );
 };
+
+{
+  /* <Image 
+              src={Hero_img}
+              layout="fill"
+              objectFit="contain"
+              objectPosition="center"
+              alt="hero image"
+              ></Image> */
+}
 
 export default hero;

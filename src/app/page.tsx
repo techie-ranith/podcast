@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "@/components/landing/Hero";
+import Popular from "@/components/popular_ep/Popular";
 
 type Props = {};
 

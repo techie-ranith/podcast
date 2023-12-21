@@ -42,6 +42,9 @@ export default {
         200: "var(--green-200)",
         800: "var(--green-800)",
       },
+      white: {
+        0: "var(--white-0)",
+      },
     },
     container: {
       center: true,
@@ -55,7 +58,7 @@ export default {
         quicksand: "var(--font-quicksand)",
         inter: "var(--font-inter)",
       },
-      
+
       keyframes: {
         "accordion-down": {
           from: { height: 0 },
