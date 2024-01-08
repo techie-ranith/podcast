@@ -69,7 +69,7 @@ const hero = () => {
         <div className="w-[40%] flex items-center flex-col justify-center gap-10">
           <div className="flex items-center justify-center">
             <div className=" w-full bg-center bg-cover relative grid grid-cols-2 grid-rows-2 gap-4">
-              <div className="rounded-full bg-blue-800 h-24 w-24  absolute flex items-center justify-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white-0 text-center z-2 whitespace-pre-line ">
+              <div className="rounded-full bg-blue-800 h-24 w-24  absolute flex items-center justify-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-0 text-center z-2 whitespace-pre-line ">
                 20+ {"\n"} Podcasts
               </div>
               <Image src={tl} alt="" className="col-1 row-1 p-0 m-0"></Image>
