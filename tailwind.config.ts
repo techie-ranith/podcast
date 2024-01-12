@@ -42,6 +42,9 @@ export default {
         200: "var(--green-200)",
         800: "var(--green-800)",
       },
+      white: {
+        0: "var(--white-0)",
+      },
     },
     container: {
       center: true,

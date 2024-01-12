@@ -4,6 +4,13 @@
   <img src="https://github.com/fossnsbm/dialectic-web/assets/91784445/982aab6a-db6a-4251-ac84-b7f7311bc8a4" align="center" style="width: 100%" />
 </div>  
 
+## Contributors
+
+<a href="https://github.com/fossnsbm/dialectic-web/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=fossnsbm/dialectic-web" />
+</a>
+
+
 ## Getting Started
 
 To start contributing to Dialectic, make sure you have the following prerequisites installed on your system:
