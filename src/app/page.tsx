@@ -1,3 +1,6 @@
+
+import { Savedbar } from "@/components/common/layout/";
+
 import React from "react";
 import Hero from "@/components/landing/Hero";
 import Popular_ep from "@/components/popular_episodes/popular_ep";
@@ -11,6 +14,7 @@ type Props = {};
 
 const Home = (props: Props) => {
   return (
+
     <div>
       <Hero />
       <Latest />
@@ -19,6 +23,7 @@ const Home = (props: Props) => {
       <FOSS_Section />
       <Logos />
     </div>
+
   );
 };
 
