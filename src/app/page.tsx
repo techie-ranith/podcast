@@ -1,5 +1,4 @@
 import { Savedbar } from '@/components/common/layout/'
-
 import React from 'react'
 import Hero from '@/components/landing/Hero'
 import Popular_ep from '@/components/popular_episodes/popular_ep'
@@ -8,7 +7,6 @@ import Popular_ep2 from '@/components/popular_episodes/Popular_ep2' // Fix: Corr
 import Popular from '@/components/popular_ep/Popular'
 import Logos from '@/components/landing/logos'
 import Episodecard from '@/components/common/layout/episode-card'
-
 import FOSS_Section from '@/components/landing/foss'
 
 type Props = {}
@@ -17,6 +15,7 @@ const Home = (props: Props) => {
   return (
     <>
       <div>
+        <Savedbar />
         <Hero />
         <Latest />
         <Popular_ep />
