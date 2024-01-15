@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "@/components/landing/Hero";
 
 import Popular_ep from "@/components/Popular_episodes/Popular_ep";
+import Popular_epi_sec from "@/components/popular_epi_sec/popular_epi_sec";
 
 import bgImage1 from "/public/images/bgimg1.svg";
 import bgImage2 from "/public/images/bgimg2.svg";
@@ -40,14 +41,14 @@ const Home = (props: Props) => {
 
   return (
     <div>
-      {/* <Hero /> */}
-
-      <div className="flex">
+      <Hero />
+      {/* <div className="flex">
         <Popular_ep {...card1} />
         <Popular_ep {...card2} />
         <Popular_ep {...card3} />
         <Popular_ep {...card4} />
-      </div>
+      </div> */}
+      Popular_epi_sec
     </div>
   );
 };

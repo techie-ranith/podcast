@@ -26,7 +26,7 @@ const Popular_ep = (props) => {
         style={bgImgStyle}
       >
         {/*       <img src={backGround} style={{backgroundImage:'linear-gradient(to bottom,transparent, rgba(0, 0, 0, 0.8))'}} />
-         */}{" "}
+         */}
         <div className="flex justify-end">
           <Button
             variant={"black"}
