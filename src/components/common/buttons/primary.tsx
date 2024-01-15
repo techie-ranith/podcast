@@ -10,11 +10,15 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        blue: "bg-blue-400 text-gray-0 hover:bg-blue-400/90 hover:bg-gray-0 hover:text-blue-400 hover:outline hover:outline-blue-400 hover:outline-1", 
-        "blue-outline": "outline outline-1 bg-gray-0 text-blue-400 hover:bg-blue-400 hover:text-gray-0",
-        black: "bg-gray-900 text-gray-0 hover:bg-gray-0 hover:text-gray-900 hover:outline hover:outline-1",
-        "black-outline": "outline outline-1 bg-gray-0 text-gray-900 hover:bg-gray-900 hover:text-gray-0",
-        "white-outline": "outline outline-1 text-gray-900 bg-gray-900 text-gray-0 hover:border hover:border-gray-0 hover:bg-gray-0 hover:text-gray-900",
+        blue: "bg-blue-400 text-gray-0 hover:bg-blue-400/90 hover:bg-gray-0 hover:text-blue-400 hover:outline hover:outline-blue-400 hover:outline-1",
+        "blue-outline":
+          "outline outline-1 bg-gray-0 text-blue-400 hover:bg-blue-400 hover:text-gray-0",
+        black:
+          "bg-gray-900 text-gray-0 hover:bg-gray-0 hover:text-gray-900 hover:outline hover:outline-1",
+        "black-outline":
+          "outline outline-1 bg-gray-0 text-gray-900 hover:bg-gray-900 hover:text-gray-0",
+        "white-outline":
+          "outline outline-1 text-gray-900 bg-gray-900 text-gray-0 hover:border hover:border-gray-0 hover:bg-gray-0 hover:text-gray-900",
         destructive: "bg-red-200 text-gray-0 hover:bg-gray-200/90",
         secondary: "bg-gray-900 text-gray-0 hover:bg-gray-900/80",
         link: "text-gray-900 underline-offset-4 hover:underline ",
@@ -24,13 +28,14 @@ const buttonVariants = cva(
         sm: "h-9 rounded-md px-3",
         lg: "h-12 rounded-md px-8 text-lg",
         icon: "h-10 w-10",
+        rounded: "h-10 px-4 rounded-full",
       },
     },
     defaultVariants: {
       variant: "blue",
       size: "default",
     },
-  }
+  },
 );
 
 export interface ButtonProps
@@ -41,14 +46,25 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, loading = false, children, ...props }, ref) => {
+  (
+    {
+      className,
+      variant,
+      size,
+      asChild = false,
+      loading = false,
+      children,
+      ...props
+    },
+    ref,
+  ) => {
     const Comp = asChild ? Slot : "button";
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }))} 
+        className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
-        disabled={loading} 
+        disabled={loading}
       >
         {loading ? (
           <>
@@ -60,7 +76,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         )}
       </Comp>
     );
-  }
+  },
 );
 Button.displayName = "Button";
 
