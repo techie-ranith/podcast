@@ -1,19 +1,19 @@
-import React from "react";
-import { Container } from "../common";
+import React from 'react'
+import { Container } from '../common'
 
-import DevLab from "/public/images/DevLab.png";
-import OWASP from "/public/images/OWASP.png";
-import DevOps from "/public/images/DevOps.png";
-import Mozilla from "/public/images/Mozilla.png";
-import FOSS_Logo_4 from "/public/images/FOSS Logo 4.png";
-import WIF from "/public/images/WIF.png";
-import Devoke from "/public/images/Devoke.png";
-import Crowdsource from "/public/images/Crowdsource.png";
+import DevLab from '/public/images/DevLab.png'
+import OWASP from '/public/images/OWASP.png'
+import DevOps from '/public/images/DevOps.png'
+import Mozilla from '/public/images/Mozilla.png'
+import FOSS_Logo_4 from '/public/images/FOSS Logo 4.png'
+import WIF from '/public/images/WIF.png'
+import Devoke from '/public/images/Devoke.png'
+import Crowdsource from '/public/images/Crowdsource.png'
 
 const Brand = () => {
   return (
-    <Container>
-      <div className="flex flex-wrap justify-center items-center">
+    <>
+      <div className="flex flex-wrap justify-center items-center lg:flex-row xs:flex-col">
         <div className=" flex justify-center items-center">
           <img src={DevLab.src} alt="DevLab" />
         </div>
@@ -39,8 +39,8 @@ const Brand = () => {
           <img src={Crowdsource.src} alt="Crowdsource" />
         </div>
       </div>
-    </Container>
-  );
-};
+    </>
+  )
+}
 
-export default Brand;
+export default Brand
