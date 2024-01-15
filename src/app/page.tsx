@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "@/components/landing/Hero";
+
 import Popular_ep from "@/components/Popular_episodes/Popular_ep";
 
 import bgImage1 from "/public/images/bgimg1.svg";
