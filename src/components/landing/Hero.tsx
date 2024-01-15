@@ -50,7 +50,7 @@ const hero = () => {
           </div>
           <div className="flex items-center justify-center gap-4">
             <div>Listen on: </div>
-            <div className="flex items-center gap-4 justify-center">
+            <div className="flex items-center gap-4 justify-center animate ">
               <a href="">
                 <Image src={spotify} alt="icon"></Image>
               </a>
@@ -78,7 +78,7 @@ const hero = () => {
               <Image src={br} alt="" className="col-2 row-2 p-0 m-0"></Image>
             </div>
           </div>
-          <div className="` w-full flex text-sm items-center justify-center gap-6">
+          <div className="w-full flex text-sm items-center justify-center gap-6">
             <div className=" flex flex-1 h-full relative items-center justify-end">
               <Image
                 src={listners}
@@ -96,13 +96,6 @@ const hero = () => {
 };
 
 {
-  /* <Image 
-              src={Hero_img}
-              layout="fill"
-              objectFit="contain"
-              objectPosition="center"
-              alt="hero image"
-              ></Image> */
 }
 
 export default hero;
