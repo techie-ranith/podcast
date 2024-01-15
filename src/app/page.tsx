@@ -10,19 +10,16 @@ import Popular from "@/components/popular_ep/Popular";
 import Logos from "@/components/landing/logos";
 import FOSS_Section from "@/components/landing/foss";
 
+
 type Props = {};
 
 const Home = (props: Props) => {
   return (
-
-    <div>
-      <Hero />
-      <Latest />
-      <Popular_ep />
-      <Popular_ep2 />
-      <FOSS_Section />
-      <Logos />
-    </div>
+    <>
+      <main className="bg-gray-900 h-screen">
+        <Episodecard />
+      </main>
+    </>
 
   );
 };
