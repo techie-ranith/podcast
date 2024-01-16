@@ -1,14 +1,14 @@
-import React from "react";
-import { Button, Container } from "../common";
-import "../../styles/fonts/fonts";
-import Image from "next/image";
-import FOSS_Pictures from "/public/images/FOSS pictures.png";
-import { IoIosArrowForward } from "react-icons/io";
+import React from 'react'
+import { Button, Container } from '../common'
+import '../../styles/fonts/fonts'
+import Image from 'next/image'
+import FOSS_Pictures from '/public/images/FOSS pictures.png'
+import { IoIosArrowForward } from 'react-icons/io'
 
 const FOSS_Section = () => {
-  const customWidth = "26rem";
+  const customWidth = '26rem'
   return (
-    <Container>
+    <>
       <div className="grid grid-col-1 md:grid-cols-2 mt-20">
         <div className="felx item-start flex-col items-start justify-between">
           <div
@@ -16,7 +16,7 @@ const FOSS_Section = () => {
             className="flex items-center justify-right gap-4 bg-gray-50 rounded-full pr-4"
           >
             <div>
-              <Button variant={"blue"} size={"rounded"}>
+              <Button variant={'blue'} size={'rounded'}>
                 Who are we?
               </Button>
             </div>
@@ -43,14 +43,14 @@ const FOSS_Section = () => {
         <div className="flex flex-1 justify-end items-center w-full h-full">
           <Image
             src={FOSS_Pictures}
-            alt={"FOSS_Section image"}
+            alt={'FOSS_Section image'}
             width={450}
             height={500}
           />
         </div>
       </div>
-    </Container>
-  );
-};
+    </>
+  )
+}
 
-export default FOSS_Section;
+export default FOSS_Section
