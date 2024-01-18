@@ -6,7 +6,7 @@ import { Savedbar } from '@/components/common/layout/'
 import { Container } from '@/components/common'
 import Latest from '@/components/latest_episode/latest'
 import Logos from '@/components/landing/logos'
-import Episodecard from '@/components/common/layout/episode-card'
+import Episodecard from '@/components/common/layout/Episode_card'
 import FOSS_Section from '@/components/landing/foss'
 
 // Images
