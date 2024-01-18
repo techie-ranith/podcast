@@ -1,22 +1,23 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react'
+import Image from 'next/image'
+import Containerf from '@/components/common/containerf'
 import {
   BluetoothConnected,
   PlaneIcon,
   PlayCircle,
   PlayIcon,
   Share,
-} from "lucide-react";
-import { Button } from "../buttons";
+} from 'lucide-react'
 
-type Props = {};
+import { Button } from '../buttons'
 
-const Episodecard = (props: Props) => {
+type Props = {}
+
+const Episode_card = () => {
   return (
-    <>
-      -
-      <div className="w-ful h-screen flex justify-center items-center">
-        <div className="w-[1200px] h-fit rounded-[10px] ring-2 ring-gray-0 flex p-[40px] bg-blue-200   ">
+    <div className=" pt-11">
+      <div className="w-full ">
+        <div className="w-auto h-fit rounded-[10px] ring-2 ring-gray-0 flex p-[40px] bg-blue-200   ">
           <div>
             <Image
               src="/man.png"
@@ -62,8 +63,8 @@ const Episodecard = (props: Props) => {
           </div>
         </div>
       </div>
-    </>
-  );
-};
+    </div>
+  )
+}
 
-export default Episodecard;
+export default Episode_card
