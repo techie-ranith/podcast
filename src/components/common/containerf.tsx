@@ -1,8 +1,8 @@
-interface ContainerProps {
+interface ContainerfProps {
   children: React.ReactNode
 }
 
-const Container: React.FC<ContainerProps> = ({ children }) => {
+const Containerf: React.FC<ContainerfProps> = ({ children }) => {
   return (
     <div
       className={`
@@ -13,7 +13,7 @@ const Container: React.FC<ContainerProps> = ({ children }) => {
             md:px-10
             sm:px-10
             px-6
-            h-screen
+            
             
         `}
     >
@@ -22,4 +22,4 @@ const Container: React.FC<ContainerProps> = ({ children }) => {
   )
 }
 
-export default Container
+export default Containerf
