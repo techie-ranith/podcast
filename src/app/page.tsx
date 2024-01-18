@@ -14,6 +14,7 @@ import bgImage1 from '/public/images/bgimg1.svg'
 import bgImage2 from '/public/images/bgimg2.svg'
 import bgImage3 from '/public/images/bgimg3.svg'
 import bgImage4 from '/public/images/bgimg4.svg'
+import EpisodeSection from '@/components/common/layout/Episode_section'
 
 type Props = {}
 
@@ -51,7 +52,7 @@ const Home = (props: Props) => {
       <Hero />
       <Popular_epi_sec></Popular_epi_sec>
       <Latest />
-      <Episodecard />
+      <EpisodeSection />
       <Container>
         <FOSS_Section />
         <Logos />
