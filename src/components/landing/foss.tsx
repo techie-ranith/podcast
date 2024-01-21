@@ -1,9 +1,10 @@
 import React from 'react'
-import { Button, Container } from '../common'
+import { Button } from '../common'
 import '../../styles/fonts/fonts'
 import Image from 'next/image'
 import FOSS_Pictures from '/public/images/FOSS pictures.png'
 import { IoIosArrowForward } from 'react-icons/io'
+import { Container } from 'lucide-react'
 
 const FOSS_Section = () => {
   const customWidth = '26rem'
@@ -40,6 +41,7 @@ const FOSS_Section = () => {
             </Button>
           </div>
         </div>
+
         <div className="flex flex-1 justify-end items-center w-full h-full">
           <Image
             src={FOSS_Pictures}

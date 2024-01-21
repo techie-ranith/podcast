@@ -2,5 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "colors.css";
-@import "scrollbar.css";
+@import 'colors.css';
+@import 'scrollbar.css';
+
+#bge {
+  background-image: url('../../public/images/Nesletter.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: max-content;
+}
