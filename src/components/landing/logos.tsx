@@ -12,7 +12,7 @@ import Crowdsource from '/public/images/Crowdsource.png'
 
 const Brand = () => {
   return (
-    <>
+    <Container>
       <div className="flex flex-wrap justify-center items-center lg:flex-row xs:flex-col">
         <div className=" flex justify-center items-center">
           <img src={DevLab.src} alt="DevLab" />
@@ -39,7 +39,7 @@ const Brand = () => {
           <img src={Crowdsource.src} alt="Crowdsource" />
         </div>
       </div>
-    </>
+    </Container>
   )
 }
 

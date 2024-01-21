@@ -16,4 +16,3 @@ const Searchq = () => {
 }
 
 export default Searchq
-;<div></div>
