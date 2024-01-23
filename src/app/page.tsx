@@ -1,9 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Hero from '@/components/landing/Hero'
 import Popular_epi_sec from '@/components/popular_epi_sec/popular_epi_sec'
-
-import { Savedbar } from '@/components/common/layout/'
-import { Container } from '@/components/common'
+import { Footer, Navigation, Savedbar } from '@/components/common/layout/'
 import Latest from '@/components/latest_episode/latest'
 import Logos from '@/components/landing/logos'
 import FOSS_Section from '@/components/landing/foss'
@@ -16,6 +14,8 @@ import bgImage4 from '/public/images/bgimg4.svg'
 import EpisodeSection from '@/components/common/layout/Episode_section'
 import Newsletter from '@/components/common/layout/Newsletter'
 import Containerf from '@/components/common/containerf'
+import { Container } from '@/components/common'
+import hero_bg from '/public/images/Hero_Section_Vector.png'
 
 type Props = {}
 
@@ -50,16 +50,21 @@ const Home = (props: Props) => {
   return (
     <div>
       <Savedbar />
-      <Hero />
+      <Container>
+        <div className="">
+          <Navigation />
+          <Hero />
+        </div>
+      </Container>
       <Popular_epi_sec></Popular_epi_sec>
       <Latest />
       <EpisodeSection />
       <Containerf>
         <FOSS_Section />
+        <Logos />
       </Containerf>
-      <Logos />
-
       <Newsletter />
+      <Footer></Footer>
     </div>
   )
 }

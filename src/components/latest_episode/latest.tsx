@@ -1,17 +1,18 @@
-import React from "react";
-import { Button, Container } from "../common";
-import "../../styles/fonts/fonts";
-import Image from "next/image";
-import latest_img from "/public/images/Latest Episode Section Image.png";
-import { FaRegCirclePlay } from "react-icons/fa6";
+import React from 'react'
+import { Button } from '../common'
+import Containerf from '../common/containerf'
+import '../../styles/fonts/fonts'
+import Image from 'next/image'
+import latest_img from '/public/images/Latest Episode Section Image.png'
+import { FaRegCirclePlay } from 'react-icons/fa6'
 
 const latest = () => {
   return (
-    <Container>
-      <div className="grid grid-col-1 md:grid-cols-2 mt-20">
+    <Containerf>
+      <div className="grid grid-col-1 md:grid-cols-2 mt-20 p-8">
         <div>
           <Image
-            alt={"latest image"}
+            alt={'latest image'}
             src={latest_img}
             width={450}
             height={500}
@@ -20,7 +21,7 @@ const latest = () => {
         <div className="felx flex-col justify-between">
           <div className="flex items-center justify-left gap-5 bg-gray-50 rounded-full pr-4 w-80 ">
             <div>
-              <Button variant={"blue"} size={"rounded"}>
+              <Button variant={'blue'} size={'rounded'}>
                 Episode 1
               </Button>
             </div>
@@ -47,8 +48,8 @@ const latest = () => {
           </div>
         </div>
       </div>
-    </Container>
-  );
-};
+    </Containerf>
+  )
+}
 
-export default latest;
+export default latest
