@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Hero from '@/components/landing/Hero'
+import Popular_epi_sec from '@/components/popular_epi_sec/popular_epi_sec'
 import { Footer, Navigation, Savedbar } from '@/components/common/layout/'
 import Latest from '@/components/latest_episode/latest'
 import Logos from '@/components/landing/logos'
@@ -50,9 +51,12 @@ const Home = (props: Props) => {
     <div>
       <Savedbar />
       <Container>
-        <Navigation />
-        <Hero />
+        <div className="">
+          <Navigation />
+          <Hero />
+        </div>
       </Container>
+      <Popular_epi_sec></Popular_epi_sec>
       <Latest />
       <EpisodeSection />
       <Containerf>
