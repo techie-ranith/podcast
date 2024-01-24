@@ -23,10 +23,12 @@ const Allepisode = (props: Props) => {
       </Containerf>
 
       <Containerf>
-        <Episodecard />
-        <Episodecard />
-        <Episodecard />
-        <Episodecard />
+        <div className=" p-9">
+          <Episodecard />
+          <Episodecard />
+          <Episodecard />
+          <Episodecard />
+        </div>
       </Containerf>
 
       <Containerf>

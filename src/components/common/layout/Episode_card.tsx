@@ -17,7 +17,7 @@ const Episode_card = () => {
   return (
     <div className=" pt-11">
       <div className="w-full ">
-        <div className="w-auto h-fit rounded-[10px] ring-2 ring-gray-0 flex p-[40px] bg-blue-200   ">
+        <div className="w-auto h-fit rounded-[10px] ring-2 ring-gray-0 flex p-[40px] bg-blue-200  flex-col sm:flex-row  ">
           <div>
             <Image
               src="/man.png"
@@ -25,6 +25,7 @@ const Episode_card = () => {
               height={345}
               alt="Description of the image"
             />
+
             <div className="text-gray-0 w-[240-px] h-auto grid justify-center ">
               <p>Speaker Name</p>
               <p className="relative pl-5">Position</p>

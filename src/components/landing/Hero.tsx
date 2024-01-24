@@ -15,10 +15,11 @@ import tl from '/public/images/tl.png'
 import tr from '/public/images/tr.png'
 import bl from '/public/images/bl.png'
 import br from '/public/images/br.png'
+import Containerf from '../common/containerf'
 
 const hero = () => {
   return (
-    <div className=" flex flex-row-reverse lg:flex-row xs:flex-col gap-4 items-center justify-center mt-4 mb-4 xs:h-screen text-gray-900 text-lg font-medium pt-4 h-screen">
+    <div className=" flex flex-row-reverse lg:flex-row xs:flex-col gap-4 items-center justify-center mt-4 mb-4 text-gray-900 text-lg font-medium pt-4  ">
       <div className="w-[60%] flex flex-col gap-20 md:items-start items-center md:text-justify h-full text-justify">
         <div className="flex items-center justify-center gap-6 bg-gray-200 rounded-full pr-4">
           <div>
