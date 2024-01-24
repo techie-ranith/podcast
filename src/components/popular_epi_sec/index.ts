@@ -1,1 +1,1 @@
-import { default as Popular_ep } from "./popular_epi_sec";
+import { default as Popular_ep_sec } from './popular_epi_sec'
