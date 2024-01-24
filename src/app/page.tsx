@@ -12,11 +12,9 @@ import bgImage3 from '/public/images/bgimg3.svg'
 import bgImage4 from '/public/images/bgimg4.svg'
 import EpisodeSection from '@/components/common/layout/Episode_section'
 import Newsletter from '@/components/common/layout/Newsletter'
-import Popular_ep from '@/components/popular_episodes/Popular_ep'
 import Popular_ep_sec from '@/components/popular_epi_sec/popular_epi_sec'
 import Containerf from '@/components/common/containerf'
 import { Container } from '@/components/common'
-import hero_bg from '/public/images/Hero_Section_Vector.png'
 
 type Props = {}
 
@@ -58,6 +56,7 @@ const Home = (props: Props) => {
         <Hero />
       </Container>
       <Popular_ep_sec />
+
       <Latest />
       <EpisodeSection />
       <Containerf>
