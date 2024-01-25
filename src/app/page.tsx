@@ -16,6 +16,8 @@ import Newsletter from '@/components/common/layout/Newsletter'
 import Containerf from '@/components/common/containerf'
 import { Container } from '@/components/common'
 import hero_bg from '/public/images/Hero_Section_Vector.png'
+import Episode_card from '@/components/common/layout/Episode_card'
+import Popular_ep from '@/components/popular_episodes/Popular_ep'
 
 type Props = {}
 
