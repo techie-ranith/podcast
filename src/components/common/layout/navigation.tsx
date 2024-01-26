@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { Button } from '../buttons'
-
+import Link from 'next/link'
 import logo from '/public/images/footer_icons/logo.png'
 import x from '/public/images/Vector.png'
 import logo2 from '/public/images/footer_icons/foss_colored_logo.png'
@@ -75,9 +75,15 @@ const Navigation = (props: Props) => {
 
       {/* Desktop Menu */}
       <div className="hidden lg:flex items-center justify-center gap-10">
-        <div>Home</div>
-        <div>Episodes</div>
-        <div>About</div>
+        <div>
+          <Link href="/">Home</Link>
+        </div>
+        <div>
+          <Link href="/episodes">Episodes</Link>
+        </div>
+        <div>
+          <Link href="/favorites">Favorites</Link>
+        </div>
       </div>
 
       <div className="hidden lg:flex items-center justify-end">

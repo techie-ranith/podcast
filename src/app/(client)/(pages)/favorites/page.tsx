@@ -3,12 +3,15 @@ import Containerf from '@/components/common/containerf'
 import Searchq from '@/components/common/layout/search'
 import Episodecard from '@/components/common/layout/Episode_card'
 import { Button } from '@mui/material'
-
+import Navigation from '@/components/common/layout/navigation'
 type Props = {}
 
 const Favorites = (props: Props) => {
   return (
     <div>
+      <Containerf>
+        <Navigation />
+      </Containerf>
       <Containerf>
         <div className="w-full pb-36">
           <div className=" text-[64px] float-left ">Favorites</div>
