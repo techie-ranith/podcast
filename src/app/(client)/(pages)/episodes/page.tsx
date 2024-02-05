@@ -5,6 +5,7 @@ import Episodecard from '@/components/common/layout/Episode_card'
 import { Button } from '@mui/material'
 import { episodes } from '@/data/metadata'
 import { Savedbar } from '@/components/common'
+import Navigation from '@/components/common/layout/navigation'
 
 type Props = {}
 
@@ -12,6 +13,9 @@ const Allepisode = (props: Props) => {
   return (
     <div>
       <Savedbar />
+      <Containerf>
+        <Navigation />
+      </Containerf>
       <Containerf>
         <div className="w-full pb-36">
           <div className=" text-[64px] float-left ">All Episode</div>
