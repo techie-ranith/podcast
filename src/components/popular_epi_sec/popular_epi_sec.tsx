@@ -53,9 +53,9 @@ const popular_ep_sec = (props: Props) => {
             <div className="text-gray-0 font-inter text-7xl text-left ">
               Most popular <br />
               Episodes On
-              <span class="text-blue-200 font-medium"> Dialectic.</span>
+              <span className="text-blue-200 font-medium"> Dialectic.</span>
             </div>
-            <div className="text-gray-0 font-quicksand text-lg text-right">
+            <div className="sm:block hidden text-gray-0 font-quicksand text-lg text-right">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               <br />
               Fusce eu arcu sit amet libero facilisis pulvinar ac sed dui.
@@ -65,7 +65,7 @@ const popular_ep_sec = (props: Props) => {
           </div>
         </Containerf>
         <Containerf>
-          <div className="flex justify-between py-32">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-8 py-32">
             <Popular_ep {...card1} />
             <Popular_ep {...card2} />
             <Popular_ep {...card3} />

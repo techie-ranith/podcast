@@ -41,9 +41,9 @@ const latest = () => {
           </h1>
           <br />
           <div>
-            <Button>
-              Listen Now
-              <FaRegCirclePlay className="ml-4" />
+            <Button className="flex items-center gap-3 justify-center">
+              <div>Listen Now</div>
+              <FaRegCirclePlay className="" />
             </Button>
           </div>
         </div>
