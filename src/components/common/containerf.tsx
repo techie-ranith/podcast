@@ -1,8 +1,16 @@
+import React from 'react'
+
 interface ContainerfProps {
   children: React.ReactNode
+  fullHeight?: boolean
+  fullScreen?: boolean
 }
 
-const Containerf: React.FC<ContainerfProps> = ({ children }) => {
+const Containerf: React.FC<ContainerfProps> = ({
+  children,
+  fullHeight,
+  fullScreen,
+}) => {
   return (
     <div
       className={`
@@ -13,8 +21,9 @@ const Containerf: React.FC<ContainerfProps> = ({ children }) => {
         md:px-10
         sm:px-10
         px-2
-        h-full
-        `}
+        ${fullHeight ? 'h-full' : ''}
+        ${fullScreen ? 'h-screen' : ''}
+      `}
     >
       {children}
     </div>

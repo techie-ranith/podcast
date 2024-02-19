@@ -17,7 +17,7 @@ const Home = (props: Props) => {
   return (
     <div>
       <Savedbar />
-      <Containerf>
+      <Containerf fullScreen fullHeight>
         <Navigation />
         <Hero />
       </Containerf>

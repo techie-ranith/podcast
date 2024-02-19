@@ -13,7 +13,7 @@ const EpisodeSection = (props: Props) => {
   return (
     <div className="flex flex-col items-center justify-center bg-gray-900 gap-10 p-4">
       <Containerf>
-        <div className="flex flex-col gap-8 items-center justify-center">
+        <div className="flex flex-col gap-8 items-center justify-center sm:my-20">
           <div className="flex flex-col sm:flex-row items-center sm:justify-between w-full sm:-gap-0 gap-8">
             <div className="text-7xl font-semibold text-white-400">
               All Episodes
