@@ -17,17 +17,15 @@ const Home = (props: Props) => {
   return (
     <div>
       <Savedbar />
-      <Containerf fullScreen fullHeight>
-        <Navigation />
-        <Hero />
-      </Containerf>
+      <Navigation />
+      <Hero />
       <Popular_ep_sec />
       <Latest_ep />
       <Episode_section />
       <FOSS_section />
       <Logos />
       <Newsletter_section />
-      <Footer></Footer>
+      <Footer />
     </div>
   )
 }
