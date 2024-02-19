@@ -12,7 +12,7 @@ import foss_logo from '/public/images/footer_icons/foss_logo.png'
 const navLinks = [
   { title: 'Home', path: '/' },
   { title: 'Episodes', path: '/episodes' },
-  { title: 'Favourites', path: '/favourites' },
+  { title: 'Favorites', path: '/favorites' },
 ]
 
 const Navigation = () => {
