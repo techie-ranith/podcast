@@ -1,21 +1,13 @@
 import React from 'react'
-import { Button, Container } from '../common'
-import Containerp from '../common/containerp'
 import Containerf from '../common/containerf'
-import Popular_ep from '@/components/Popular_episodes/popular_ep'
-import Image from 'next/image'
-
-import playIcon from '/public/images/play.svg'
-import saveIcon from '/public/images/save.png'
-
+import Popular_ep from '../common/popular_ep'
 import bgImage1 from '/public/images/bgimg1.svg'
 import bgImage2 from '/public/images/bgimg2.svg'
 import bgImage3 from '/public/images/bgimg3.svg'
 import bgImage4 from '/public/images/bgimg4.svg'
+import '../../styles/fonts/fonts'
 
 type Props = {}
-
-import '../../styles/fonts/fonts'
 
 const popular_ep_sec = (props: Props) => {
   const card1 = {

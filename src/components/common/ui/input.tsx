@@ -8,7 +8,8 @@ export interface InputProps
 }
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, searchIco, ...props }, ref) => {
+  ({ className, type, searchIco, children, ...props }, ref) => {
+    // Include children in the props
     return (
       <>
         <div className=" relative">
@@ -24,6 +25,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             ref={ref}
             {...props}
           />
+          {children}
         </div>
       </>
     )

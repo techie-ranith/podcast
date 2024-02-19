@@ -1,7 +1,7 @@
 import React from 'react'
 import Containerf from '@/components/common/containerf'
 import Searchq from '@/components/common/layout/search'
-import Episodecard from '@/components/common/layout/Episode_card'
+import Episodecard from '@/components/common/Episode_card'
 import { Button } from '@mui/material'
 import { episodes } from '@/data/metadata'
 import { Savedbar } from '@/components/common'

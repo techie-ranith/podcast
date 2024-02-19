@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Containerf from '../containerf'
 
 import logo from '/public/images/footer_icons/logo.png'
-import logo2 from '/public/images/footer_icons/foss_colored_logo.png'
+import logo2 from '/public/images/footer_icons/foss_logo.png'
 import github from '/public/images/footer_icons/mdi_github.png'
 import linkedin from '/public/images/footer_icons/ri_linkedin-fill.png'
 import insta from '/public/images/footer_icons/ri_instagram-fill.png'
@@ -16,12 +16,12 @@ type Props = {}
 const Footer = (props: Props) => {
   return (
     <Containerf>
-      <div className="flex items-center justify-center p-6 font-inter">
-        <div className="flex flex-col justify-center items-start gap-4 flex-1">
+      <div className="flex flex-col sm:flex-row items-center justify-center p-6 font-inter gap-16">
+        <div className="flex flex-col justify-center sm:items-start items-center gap-4 flex-1">
           <div className="flex flex-col items-center justify-center">
             <Image src={logo} alt="balck logo"></Image>
           </div>
-          <div className="w-2/3">
+          <div className="sm:w-2/3 sm:text-left text-justify">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et
             est leo. Nulla fermentum ultrices ullamcorper.
           </div>
@@ -34,10 +34,10 @@ const Footer = (props: Props) => {
             <a href="">Episodes</a>
           </div>
           <div>
-            <a href="">about</a>
+            <a href="">About</a>
           </div>
         </div>
-        <div className="flex flex-col flex-1 items-end justify-center gap-4">
+        <div className="flex flex-col flex-1 sm:items-end items-center justify-center gap-4">
           <div>
             <Image src={logo2} alt="foss_logo"></Image>
           </div>

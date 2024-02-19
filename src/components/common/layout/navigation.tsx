@@ -1,109 +1,92 @@
 'use client'
 import React, { useState, useEffect } from 'react'
+import NavLink from './NavLink'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
+import MenuOverlay from './MenuOverlay'
+import Button from 'components/common/buttons/primary'
 import Image from 'next/image'
-import { Button } from '../buttons'
-import Link from 'next/link'
-import logo from '/public/images/footer_icons/logo.png'
-import x from '/public/images/Vector.png'
-import logo2 from '/public/images/footer_icons/foss_colored_logo.png'
+import dialectic_logo from '/public/images/footer_icons/logo.png'
+import x from '/public/images/footer_icons/x.png'
+import foss_logo from '/public/images/footer_icons/foss_logo.png'
 
-type Props = {}
+const navLinks = [
+  { title: 'Home', path: '/' },
+  { title: 'Episodes', path: '/episodes' },
+  { title: 'Favourites', path: '/favourites' },
+]
 
-const Navigation = (props: Props) => {
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
+const Navigation = () => {
+  const [navbarOpen, setNavbarOpen] = useState(false)
+  const [windowScrolled, setWindowScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY
-      const isTop = scrollTop < 100
-      if (isTop !== isScrolled) {
-        setIsScrolled(isTop)
-      }
+      setWindowScrolled(window.scrollY > 0)
     }
-
-    document.addEventListener('scroll', handleScroll)
-    return () => {
-      document.removeEventListener('scroll', handleScroll)
-    }
-  }, [isScrolled])
-
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!isMobileMenuOpen)
-  }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
-    <div
-      className={`flex items-center justify-between w-full pt-2 ${
-        isScrolled ? 'bg-white' : 'bg-transparent'
-      }`}
+    <nav
+      className={
+        windowScrolled
+          ? 'fixed mx-auto top-0 left-0 right-0 z-10 bg-white-0 bg-opacity-100 shadow-md'
+          : 'fixed mx-auto top-0 left-0 right-0 z-10 bg-white-0 sm:bg-opacity-50 bg-opacity-80 shadow-md'
+      }
     >
-      <div className="flex items-center gap-8">
-        <div>
-          <Image src={logo} alt="images" />
+      <div className="container flex items-center justify-between px-4 py-2 mx-auto lg:py-4">
+        <div className="flex items-center justify-center gap-6">
+          <Image
+            src={dialectic_logo}
+            alt="Your Logo"
+            className="transition-all duration-300 ease-in-out"
+          />
+          <Image
+            src={x}
+            alt="Your Logo"
+            className="transition-all duration-300 ease-in-out"
+          />
+          <Image
+            src={foss_logo}
+            alt="Your Logo"
+            className="transition-all duration-300 ease-in-out"
+          />
+        </div>
+        <div className="hidden menu md:block md:w-auto" id="navbar">
+          <ul className="flex p-4 mt-0 md:p-0 md:flex-row md:space-x-8 font-semibold">
+            {navLinks.map((link, index) => (
+              <li key={index}>
+                <NavLink href={link.path} title={link.title} />
+              </li>
+            ))}
+          </ul>
         </div>
         <div>
-          <Image src={x} alt="images" />
+          <Button className="sm:block hidden" variant={'black-outline'}>
+            Check In
+          </Button>
         </div>
-        <div>
-          <Image src={logo2} alt="images" />
-        </div>
-      </div>
-
-      {/* Mobile Menu Icon */}
-      <div className="lg:hidden cursor-pointer" onClick={toggleMobileMenu}>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          className="h-6 w-6"
-        >
-          {isMobileMenuOpen ? (
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M6 18L18 6M6 6l12 12"
-            />
+        <div className="block mobile-menu md:hidden">
+          {!navbarOpen ? (
+            <button
+              onClick={() => setNavbarOpen(true)}
+              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white-0"
+            >
+              <Bars3Icon className="w-5 h-5" />
+            </button>
           ) : (
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
+            <button
+              onClick={() => setNavbarOpen(false)}
+              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white-0"
+            >
+              <XMarkIcon className="w-5 h-5" />
+            </button>
           )}
-        </svg>
-      </div>
-
-      <div
-        className={`lg:hidden ${
-          isMobileMenuOpen ? 'block' : 'hidden'
-        } absolute top-16 left-0 right-0 bg-white p-4 shadow-md text-center`}
-      >
-        <div className="flex flex-col gap-4">
-          <div className="mb-2">Home</div> <div className="mb-2">Episodes</div>{' '}
-          <div>About</div>
         </div>
       </div>
-      <div className="hidden lg:flex items-center justify-center gap-10">
-        <div>
-          <Link href="/">Home</Link>
-        </div>
-        <div>
-          <Link href="/episodes">Episodes</Link>
-        </div>
-        <div>
-          <Link href="/favorites">Favorites</Link>
-        </div>
-      </div>
-      <div className="hidden lg:flex items-center justify-end">
-        <Button variant={'black-outline'} size={'default'}>
-          Subscribe
-        </Button>
-      </div>
-    </div>
+      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+    </nav>
   )
 }
 

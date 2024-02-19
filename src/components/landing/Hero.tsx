@@ -15,12 +15,11 @@ import tl from '/public/images/tl.png'
 import tr from '/public/images/tr.png'
 import bl from '/public/images/bl.png'
 import br from '/public/images/br.png'
-import Containerf from '../common/containerf'
 
 const hero = () => {
   return (
-    <div className=" flex flex-row-reverse lg:flex-row xs:flex-col gap-4 items-center justify-center mt-4 mb-4 text-gray-900 text-lg font-medium pt-4  ">
-      <div className="sm:w-[60%] w-full flex flex-col gap-20 md:items-start items-center md:text-justify text-justify">
+    <div className=" flex sm:flex-row flex-col gap-4 items-center justify-center mt-4 mb-4 text-gray-900 text-lg font-medium pt-4  ">
+      <div className="sm:w-[60%] w-full flex flex-col sm:gap-16 gap-8 md:items-start items-center md:text-justify text-justify">
         <div className="flex items-center justify-center gap-6 bg-gray-200 rounded-full pr-4">
           <div>
             <Button variant={'blue'} size={'rounded'}>
@@ -29,7 +28,7 @@ const hero = () => {
           </div>
           <div>Lorem ipsum dolor sit amet.</div>
         </div>
-        <div className="text-5xl w-[80%] whitespace-pre-line font-inter font-medium md:text-justify">
+        <div className="text-5xl w-[80%] whitespace-pre-line font-inter font-semibold md:text-justify tracking-wider">
           Exploring Tomorrow's{'\n'}
           Tech Innovations, {'\n'}
           One Byte at a Time.

@@ -10,7 +10,7 @@ const Searchq = () => {
         <Input
           className=" pr-16 w-auto "
           type="search"
-          placeholder="Search episodes "
+          placeholder="Enter Your Email"
           searchIco
         />
       </div>
