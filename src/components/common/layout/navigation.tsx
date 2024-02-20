@@ -33,8 +33,8 @@ const Navigation = () => {
       <nav
         className={
           windowScrolled
-            ? ' sticky mx-auto top-0 left-0 right-0 z-10 bg-white-0'
-            : ' sticky mx-auto top-0 left-0 right-0 z-10 bg-white-0'
+            ? ' fixed mx-auto top-0 left-0 right-0 z-10 bg-white-0'
+            : ' mx-auto top-0 left-0 right-0 z-10 bg-white-0'
         }
       >
         <div className="container flex items-center justify-between px-4 py-2 mx-auto lg:py-4">
