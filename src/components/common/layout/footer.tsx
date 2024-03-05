@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import Containerf from '../containerf'
+import Containerf from '../../client/containerf'
 
 import logo from '/public/images/footer_icons/logo.png'
 import logo2 from '/public/images/footer_icons/foss_logo.png'

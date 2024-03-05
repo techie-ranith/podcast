@@ -8,7 +8,7 @@ import Image from 'next/image'
 import dialectic_logo from '/public/images/footer_icons/logo.png'
 import x from '/public/images/footer_icons/x.png'
 import foss_logo from '/public/images/footer_icons/foss_logo.png'
-import Containerf from '../containerf'
+import Containerf from '../../client/containerf'
 
 const navLinks = [
   { title: 'Home', path: '/' },

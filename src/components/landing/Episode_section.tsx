@@ -1,6 +1,6 @@
 import React from 'react'
-import Containerf from '@/components/common/containerf'
-import Episodecard from '@/components/common/Episode_card'
+import Containerf from '@/components/client/containerf'
+import Episodecard from '@/components/client/Episode_card'
 import { Button } from '@mui/material'
 
 type Props = {}

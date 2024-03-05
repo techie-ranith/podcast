@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Container } from '.'
+import { Button, Container } from '../common'
 import Image from 'next/image'
 
 import bg from '/public/images/bgimg1.svg'

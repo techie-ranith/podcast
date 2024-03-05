@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import Containerf from 'components/common/containerf'
+import Containerf from '@/components/client/containerf'
 import man from '/public/images/man.png'
 import { Button } from 'components/common/buttons'
 
