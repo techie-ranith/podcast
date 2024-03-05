@@ -12,15 +12,6 @@ import '../../styles/fonts/fonts'
 const Popular_ep = (props) => {
   const { backGround, speakerInfo, episodeTitle, heading } = props
 
-  /* const bgImgStyle = {
-    backgroundImage: `linear-gradient(to bottom,transparent, rgba(0, 0, 0, 0.8)), url(${backGround})`,
-    backgroundSize: "contain", // or 'contain' depending on your preference
-    backgroundRepeat: "no-repeat",
-    width: "282px",
-    height: "328px",
-    left: "426px",
-  }; */
-
   return (
     <div className="w-fit h-fit">
       <div className="rounded-[20px]  w-fit h-fit group">
@@ -36,7 +27,6 @@ const Popular_ep = (props) => {
                 {speakerInfo}
               </Button>
             </div>
-
             <div className="text-gray-0  mt-auto font-quicksand">{heading}</div>
             <div className="flex flex-row justify-between ">
               <div className="text-gray-0 mt-2 font-inter">{episodeTitle}</div>

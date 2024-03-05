@@ -24,7 +24,7 @@ const Brand = () => {
   ]
   return (
     <Containerf>
-      <div className="flex justify-between items-center sm:flex-row flex-col my-10 sm:gap-0 gap-12">
+      <div className="flex justify-between items-center sm:flex-row flex-col my-20 sm:gap-0 gap-12">
         {images.map((image, index) => (
           <Image key={index} src={image} alt={`Image ${index}`}></Image>
         ))}
