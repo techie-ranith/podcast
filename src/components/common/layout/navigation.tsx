@@ -66,7 +66,7 @@ const Navigation = () => {
           </div>
           <div>
             <Button className="sm:block hidden" variant={'black-outline'}>
-              Check In
+              Subscribe
             </Button>
           </div>
           <div className="block mobile-menu md:hidden">
