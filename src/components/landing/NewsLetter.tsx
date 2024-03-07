@@ -1,5 +1,5 @@
 import React from 'react'
-import Containerf from '@/components/client/containerf'
+import Containerf from 'components/common/layout/containerf'
 import { Button } from 'components/common/buttons/'
 import { Input } from '../common/ui/input'
 

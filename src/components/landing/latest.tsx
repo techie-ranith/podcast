@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from '../common'
-import Containerf from '../client/containerf'
+import Containerf from '../common/layout/containerf'
 import '../../styles/fonts/fonts'
 import Image from 'next/image'
 import latest_img from '/public/images/Latest Episode Section Image.png'

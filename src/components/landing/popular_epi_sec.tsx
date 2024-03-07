@@ -1,5 +1,5 @@
 import React from 'react'
-import Containerf from '../client/containerf'
+import Containerf from '../common/layout/containerf'
 import Popular_ep from '../client/popular_ep'
 import bgImage1 from '/public/images/bgimg1.svg'
 import bgImage2 from '/public/images/bgimg2.svg'

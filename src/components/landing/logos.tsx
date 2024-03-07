@@ -1,5 +1,5 @@
 import React from 'react'
-import Containerf from '@/components/client/containerf'
+import Containerf from 'components/common/layout/containerf'
 
 import DevLab from '/public/images/DevLab.png'
 import OWASP from '/public/images/OWASP.png'
