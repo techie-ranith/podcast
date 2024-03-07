@@ -1,3 +1,4 @@
+'use client'
 import * as React from 'react'
 import Box from '@mui/material/Box'
 import Drawer from '@mui/material/Drawer'
@@ -17,6 +18,8 @@ import PeopleIcon from '@mui/icons-material/People'
 import Episodecard from 'components/admin/EpisodeCard'
 import { clerkClient } from '@clerk/nextjs'
 import { Container } from 'components/common/'
+import Image from 'next/image'
+import logo from '/public/images/footer_icons/foss_logo.png'
 
 const drawerWidth = 240
 
@@ -43,7 +46,13 @@ export default function ClippedDrawer() {
         sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
       >
         <Toolbar>
-          <Typography variant="h6" noWrap component="div">
+          <Typography
+            variant="h6"
+            noWrap
+            component="div"
+            className="flex gap-2 items-center justify-center"
+          >
+            <Image src={logo} alt="image"></Image>
             Dialectic
           </Typography>
         </Toolbar>
@@ -96,7 +105,24 @@ export default function ClippedDrawer() {
                   <div key={index}>{user.name}</div>
                 ))}
               </div>
-              <div className="">platforms</div>
+              <div className="">
+                <div>
+                  <Image></Image>
+                  <div></div>
+                </div>
+                <div>
+                  <Image></Image>
+                  <div></div>
+                </div>
+                <div>
+                  <Image></Image>
+                  <div></div>
+                </div>
+                <div>
+                  <Image></Image>
+                  <div></div>
+                </div>
+              </div>
             </div>
           </div>
         </Container>
