@@ -1,5 +1,5 @@
 import React from 'react'
-import Containerf from '@/components/client/containerf'
+import Containerf from 'components/common/layout/containerf'
 import Searchq from 'components/common/layout/search'
 import Episodecard from '@/components/client/Episode_card'
 import { Button } from '@mui/material'

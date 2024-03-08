@@ -21,19 +21,14 @@ import { Container } from 'components/common/'
 import Image from 'next/image'
 import logo from '/public/images/footer_icons/foss_logo.png'
 
+import ApplePodcast from '/public/images/Apple_podcasts.svg'
+import Spotify from '/public/images/Spotify.svg'
+import RSS from '/public/images/RSS.svg'
+import OverCast from '/public/images/Overcast.svg'
+
 const drawerWidth = 240
 
 export default function ClippedDrawer() {
-  const [users, setUsers] = React.useState([])
-
-  React.useEffect(() => {
-    async function fetchUsers() {
-      const userList = await clerkClient.users.getUserList()
-      setUsers(userList)
-    }
-    fetchUsers()
-  }, [])
-
   const episodeCards = Array.from({ length: 6 }, (_, index) => (
     <Episodecard key={index}></Episodecard>
   ))
@@ -100,26 +95,22 @@ export default function ClippedDrawer() {
           <div className="flex items-center justify-center border w-full">
             <div className="flex-1">{episodeCards}</div>
             <div className="flex flex-col  flex-1 border">
-              <div className="users">
-                {users.map((user, index) => (
-                  <div key={index}>{user.name}</div>
-                ))}
-              </div>
-              <div className="">
-                <div>
-                  <Image></Image>
+              <div className="users"></div>
+              <div className="flex items-center justify-center flex-col gap-20">
+                <div className="flex items-center justify-center gap-4">
+                  <Image src={ApplePodcast} alt="apple"></Image>
+                  <div>Apple Podcast</div>
+                </div>
+                <div className="flex items-center justify-center gap-4">
+                  <Image src={Spotify} alt="Spotify"></Image>
+                  <div>Spotify</div>
+                </div>
+                <div className="flex items-center justify-center">
+                  <Image src={RSS} alt="RSS"></Image>
                   <div></div>
                 </div>
-                <div>
-                  <Image></Image>
-                  <div></div>
-                </div>
-                <div>
-                  <Image></Image>
-                  <div></div>
-                </div>
-                <div>
-                  <Image></Image>
+                <div className="flex items-center justify-center">
+                  <Image src={OverCast} alt="Overcast"></Image>
                   <div></div>
                 </div>
               </div>

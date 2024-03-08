@@ -1,15 +1,17 @@
 import React from 'react'
 import { Button, Container } from '../common'
 import Image from 'next/image'
-
-import bg from '/public/images/bgimg1.svg'
-
 import playIcon from '/public/images/play.svg'
-import saveIcon from '/public/images/save.png'
-
 import '../../styles/fonts/fonts'
 
-const Popular_ep = (props) => {
+type info = {
+  backGround: string
+  speakerInfo: string
+  episodeTitle: string
+  heading: string
+}
+
+const Popular_ep = (props: info) => {
   const { backGround, speakerInfo, episodeTitle, heading } = props
 
   return (

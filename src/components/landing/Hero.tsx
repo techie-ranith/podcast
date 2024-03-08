@@ -30,7 +30,7 @@ const hero = () => {
             <div>Lorem ipsum dolor sit amet.</div>
           </div>
           <div className="text-5xl w-[80%] whitespace-pre-line font-inter font-semibold md:text-justify tracking-wider">
-            Exploring Tomorrow's{'\n'}
+            Exploring Tomorrow&apos;s{'\n'}
             Tech Innovations, {'\n'}
             One Byte at a Time.
           </div>
