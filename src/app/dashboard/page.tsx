@@ -1,5 +1,5 @@
 'use client'
-import * as React from 'react'
+import React, { useState } from 'react'
 import Box from '@mui/material/Box'
 import Drawer from '@mui/material/Drawer'
 import AppBar from '@mui/material/AppBar'
@@ -15,23 +15,62 @@ import DashboardIcon from '@mui/icons-material/Dashboard'
 import BookmarkIcon from '@mui/icons-material/Bookmark'
 import AddIcon from '@mui/icons-material/Add'
 import PeopleIcon from '@mui/icons-material/People'
-import Episodecard from 'components/admin/EpisodeCard'
-import { clerkClient } from '@clerk/nextjs'
 import { Container } from 'components/common/'
 import Image from 'next/image'
 import logo from '/public/images/footer_icons/foss_logo.png'
-
-import ApplePodcast from '/public/images/Apple_podcasts.svg'
-import Spotify from '/public/images/Spotify.svg'
-import RSS from '/public/images/RSS.svg'
-import OverCast from '/public/images/Overcast.svg'
+import Dashboard from 'components/admin/Dashboard'
+import AddEpisode from 'components/admin/AddEpisode'
+import User from 'components/admin/User'
+import Platforms from 'components/admin/Platforms'
 
 const drawerWidth = 240
 
 export default function ClippedDrawer() {
-  const episodeCards = Array.from({ length: 6 }, (_, index) => (
-    <Episodecard key={index}></Episodecard>
-  ))
+  const [activeButton, setActiveButton] = useState('Dashboard')
+
+  const handleButtonClick = (text: string) => {
+    setActiveButton(text)
+  }
+
+  const DashboardContent = () => {
+    return <Dashboard></Dashboard>
+  }
+  const AddEpisodeContent = () => {
+    return (
+      <div>
+        <AddEpisode></AddEpisode>
+      </div>
+    )
+  }
+  const UserContent = () => {
+    return (
+      <div>
+        <User></User>
+      </div>
+    )
+  }
+  const PlatformsContent = () => {
+    return (
+      <div>
+        <Platforms></Platforms>
+      </div>
+    )
+  }
+
+  const renderContent = () => {
+    switch (activeButton) {
+      case 'Dashboard':
+        return <DashboardContent />
+      case 'Add Episode':
+        return <AddEpisodeContent />
+      case 'Users':
+        return <UserContent />
+      case 'Platforms':
+        return <PlatformsContent />
+      default:
+        return null
+    }
+  }
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -69,7 +108,7 @@ export default function ClippedDrawer() {
             {['Dashboard', 'Add Episode', 'Users', 'Platforms'].map(
               (text, index) => (
                 <ListItem key={text} disablePadding>
-                  <ListItemButton>
+                  <ListItemButton onClick={() => handleButtonClick(text)}>
                     <ListItemIcon>
                       {index % 4 === 0 ? (
                         <DashboardIcon />
@@ -91,32 +130,7 @@ export default function ClippedDrawer() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <Toolbar />
-        <Container>
-          <div className="flex items-center justify-center border w-full">
-            <div className="flex-1">{episodeCards}</div>
-            <div className="flex flex-col  flex-1 border">
-              <div className="users"></div>
-              <div className="flex items-center justify-center flex-col gap-20">
-                <div className="flex items-center justify-center gap-4">
-                  <Image src={ApplePodcast} alt="apple"></Image>
-                  <div>Apple Podcast</div>
-                </div>
-                <div className="flex items-center justify-center gap-4">
-                  <Image src={Spotify} alt="Spotify"></Image>
-                  <div>Spotify</div>
-                </div>
-                <div className="flex items-center justify-center">
-                  <Image src={RSS} alt="RSS"></Image>
-                  <div></div>
-                </div>
-                <div className="flex items-center justify-center">
-                  <Image src={OverCast} alt="Overcast"></Image>
-                  <div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Container>
+        <Container>{renderContent()}</Container>
       </Box>
     </Box>
   )

@@ -1,0 +1,5 @@
+export { default as Dashboad } from './Dashboard'
+export { default as AddEpisode } from './AddEpisode'
+export { default as Users } from './User'
+export { default as Platforms } from './Platforms'
+export { default as EpisodeCard } from './EpisodeCard'
